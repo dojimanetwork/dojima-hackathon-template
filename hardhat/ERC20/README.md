@@ -1,8 +1,8 @@
-# dojima-hackathon
+# Dojima Hackathon
 
-#### Setup genesis
+### Setup genesis
 
-#### Make sure your node version is >18.0.0
+#### Ensure your Node.js version is greater than 18.0.0.
 
 Setup genesis whenever contracts get changed
 ### 1. Install dependencies and submodules
@@ -41,6 +41,12 @@ TestToken
 ### 4. Deploy Contracts to Dojima Chain
 ```bash
 $ npx hardhat run scripts/deploy.js --network dojima_chain_devnet
+```
+Should get the output similar to
+```bash
+Wallet Address:  0x4ba5B96dBee62274B4F72817e76C7bb9fAaD3126
+Deploying TestToken...
+Test Token deployed to: 0xA8548F964cBBfD495a966bB79e9f13493f301aB4
 ```
 
 

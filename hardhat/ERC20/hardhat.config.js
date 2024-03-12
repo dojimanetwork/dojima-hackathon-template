@@ -1,58 +1,63 @@
-require('@nomicfoundation/hardhat-toolbox');
-require('@nomicfoundation/hardhat-ethers');
+// Required modules for Hardhat configuration
+require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-ethers");
 require("@nomiclabs/hardhat-truffle5");
-require("@nomicfoundation/hardhat-chai-matchers")
+require("@nomicfoundation/hardhat-chai-matchers");
 require("@openzeppelin/hardhat-upgrades");
-// require('hardhat-ethernal');
-// require("hardhat-tracer");
-require('dotenv').config();
+require("dotenv").config();
 
-/** @type import('hardhat/config').HardhatUserConfig */
+/**
+ * Hardhat configuration
+ * @type import('hardhat/config').HardhatUserConfig
+ */
 module.exports = {
-  ethernal: {
-    apiToken: process.env.ETHERNAL_API_TOKEN,
-},
-    solidity:  {
-        compilers: [
-          {
-            version: '0.8.20',
-            settings: {
-                optimizer: {
-                    enabled: true,
-                    runs: 200,
-                },
-                viaIR: true,
-            },
+  // Solidity compiler settings
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.20", // Solidity compiler version
+        settings: {
+          optimizer: {
+            enabled: true, // Enable optimization
+            runs: 200, // Number of optimization runs
           },
-        ],
+          viaIR: true, // Use intermediate representation (IR) for compilation
+        },
+      },
+    ],
   },
 
-  
-    networks: {
-        dojima_chain_devnet: {
-            url: 'https://api-dev.d11k.dojima.network/',
-            chainId: 1001,
-            // gas: 5000000, //units of gas you are willing to pay, aka gas limit
-            gasPrice: 2000000000, // gas is typically in units of gwei, but you must enter it as wei here
-            accounts: [
-                process.env.PRIVATE_KEY,
-            ],
-        },
-        sepolia_ethereum: {
-          url: 'https://1rpc.io/sepolia',
-          chainId: 11155111 ,
-          accounts: [
-              process.env.PRIVATE_KEY,
-          ],
-      },
-        
-        bsc: {
-            url: "https://data-seed-prebsc-1-s1.bnbchain.org:8545/",
-            chainId: 97,
-            gasPrice: 20000000000,
-            accounts: [
-                process.env.PRIVATE_KEY,
-            ],
-        },
+  // Network configurations for deploying contracts
+  networks: {
+    // Configuration for Dojima Chain Devnet
+    dojima_chain_devnet: {
+      url: "https://api-dev.d11k.dojima.network/", // RPC URL for the network
+      chainId: 1001, // Chain ID of the network
+      gasPrice: 2000000000, // Gas price in wei
+      accounts: [
+        process.env.PRIVATE_KEY, // Private key for deploying contracts
+      ],
     },
+    // Configuration for Holesky Ethereum testnet
+    holesky_ethereum: {
+      url: "https://eth-dev.h4s.dojima.network/",
+      // url: 'https://ethereum-holesky.publicnode.com',  // If you want to use public node
+      chainId: 17000,
+      gasPrice: 2000000000,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    // Configuration for Sepolia Ethereum testnet
+    sepolia_ethereum: {
+      url: "https://1rpc.io/sepolia",
+      chainId: 11155111,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    // Configuration for Binance Smart Chain testnet
+    bsc: {
+      url: "https://data-seed-prebsc-1-s1.bnbchain.org:8545/",
+      chainId: 97,
+      gasPrice: 20000000000,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
 };

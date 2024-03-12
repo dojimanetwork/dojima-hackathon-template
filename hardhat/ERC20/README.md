@@ -1,81 +1,57 @@
-# Hardhat Boilerplate
+# dojima-hackathon
 
-This repository contains a sample project that you can use as the starting point
-for your Dojima project. It's also a great fit for learning the basics of
-smart contract development.
+#### Setup genesis
 
-This project is intended to be used with the
-[Hardhat Beginners Tutorial](https://hardhat.org/tutorial), but you should be
-able to follow it by yourself by reading the README and exploring its
-`contracts`, `tests` and `scripts` directories.
+#### Make sure your node version is >18.0.0
 
-## Quick start
+Setup genesis whenever contracts get changed
+### 1. Install dependencies and submodules
+```bash
+$ npm install
 
-The first things you need to do are cloning this repository and installing its
-dependencies:
-
-```sh
-git clone https://github.com/dojimanetwork/dojima-hackathon-template.git
-cd hardhat/ERC20
-npm install
 ```
 
-Once installed, let's run Hardhat's testing network:
-
-```sh
-npx hardhat node
+### 2. Compile contracts
+```bash
+#installation of npm v18.0.0 is required
+$ npx hardhat compile
+```
+Should get the output similar to
+```bash
+Compiled 1 Solidity file successfully (evm target: paris).
 ```
 
-Then, on a new terminal, go to the repository's root folder and run this to
-deploy your contract:
+### 3. Testing Contracts
+```bash
+$ npx hardhat test
+```
+Should get the output similar to
+```bash
+Token contract
+    ✓ Deployment should assign the total supply of tokens to the owner (654ms)
 
-```sh
-npx hardhat run scripts/deploy.js --network localhost
+
+  1 passing (663ms)
 ```
 
-You will
-need to have [Dojima Wallet](https://chromewebstore.google.com/detail/dojima-wallet-extension/bmcnjpgbhlegnmpmphhfealchlfifepj?hl=en-GB&utm_source=ext_sidebar) or [Metamask](https://metamask.io) installed and listening to
-`localhost 8545`.
-
-## User Guide
-
-You can find detailed instructions on using this repository and many tips in [its documentation](https://hardhat.org/tutorial).
-
-- [Writing and compiling contracts](https://hardhat.org/tutorial/writing-and-compiling-contracts/)
-- [Setting up the environment](https://hardhat.org/tutorial/setting-up-the-environment/)
-- [Testing Contracts](https://hardhat.org/tutorial/testing-contracts/)
-- [Setting up your wallet](https://hardhat.org/tutorial/boilerplate-project#how-to-use-it)
-- [Hardhat's full documentation](https://hardhat.org/docs/)
-
-For a complete introduction to Hardhat, refer to [this guide](https://hardhat.org/getting-started/#overview).
-
-## What's Included?
-
-This repository uses our recommended hardhat setup, by using our [`@nomicfoundation/hardhat-toolbox`](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox). When you use this plugin, you'll be able to:
-
-- Deploy and interact with your contracts using [ethers.js](https://docs.ethers.io/v5/) and the [`hardhat-ethers`](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-ethers) plugin.
-- Test your contracts with [Mocha](https://mochajs.org/), [Chai](https://chaijs.com/) and our own [Hardhat Chai Matchers](https://hardhat.org/hardhat-chai-matchers) plugin.
-- Interact with Hardhat Network with our [Hardhat Network Helpers](https://hardhat.org/hardhat-network-helpers).
-- Verify the source code of your contracts with the [hardhat-etherscan](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-etherscan) plugin.
-- Get metrics on the gas used by your contracts with the [hardhat-gas-reporter](https://github.com/cgewecke/hardhat-gas-reporter) plugin.
-- Measure your tests coverage with [solidity-coverage](https://github.com/sc-forks/solidity-coverage).
+### 4. Deploy Contracts to Dojima Chain
+```bash
+$ npx hardhat run scripts/deploy.js --network dojima_chain_devnet
+```
 
 
-## Troubleshooting
+### PR Submission Guidelines
 
-- `Invalid nonce` errors: if you are seeing this error on the `npx hardhat node`
-  console, try resetting your Metamask account. This will reset the account's
-  transaction history and also the nonce. Open Metamask, click on your account
-  followed by `Settings > Advanced > Clear activity tab data`.
-
-## Setting up your editor
-
-[Hardhat for Visual Studio Code](https://hardhat.org/hardhat-vscode) is the official Hardhat extension that adds advanced support for Solidity to VSCode. If you use Visual Studio Code, give it a try!
-
-## Getting help and updates
-
-If you need help with this project, or with Hardhat in general, please read [this guide](https://hardhat.org/hardhat-runner/docs/guides/getting-help) to learn where and how to get it.
-
-For the latest news about Hardhat, [follow us on Twitter](https://twitter.com/HardhatHQ), and don't forget to star [our GitHub repository](https://github.com/NomicFoundation/hardhat)!
-
-**Happy _building_!**
+1. Fork `dojima-hackathon-template` repository
+2. Create a new folder with `team-name` inside ``hackathon/<hackathon-name>`` folder in main branch
+3. Copy your entire project repository and add a `README` file.
+4. `README` file should contain the following:
+```markdown
+1. Project name and its members
+2. Description
+3. Tag-line (if-any)
+4. Logo (optional)
+5. Steps to follow for testing the project
+6. Deployed contract address on top of DOJIMA blockchain
+```
+5. Submit a `Pull Request` to this repository with your changes.

@@ -7,15 +7,13 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 // TestToken contract inheriting from multiple OpenZeppelin contracts
-contract TestToken is ERC20, ERC20Burnable, ERC20Pausable, Ownable, ERC20Permit {
+contract TestToken is ERC20, ERC20Burnable, ERC20Pausable, Ownable {
     // Constructor to initialize the token with a name, symbol, initial supply, and owner
     constructor(address initialOwner)
         ERC20("TestToken", "TEST")
         Ownable(initialOwner)
-        ERC20Permit("TestToken")
     {
         // Mint initial supply of tokens and assign to the deployer
         _mint(msg.sender, 1000000000 * 10 ** decimals());

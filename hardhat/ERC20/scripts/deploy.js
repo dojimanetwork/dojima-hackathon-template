@@ -1,12 +1,12 @@
-require('dotenv').config(); // Load environment variables from .env file
+require("dotenv").config(); // Load environment variables from .env file
 
-const { ethers } = require('hardhat');
+const { ethers } = require("hardhat");
 
 async function main() {
   // Get the private key from environment variables
   const privateKey = process.env.PRIVATE_KEY;
   if (!privateKey) {
-    throw new Error('Private key not found in environment variables');
+    throw new Error("Private key not found in environment variables");
   }
 
   // Derive the signer's wallet from the private key
@@ -29,7 +29,7 @@ async function main() {
 // Execute the deployment script
 main()
   .then(() => process.exit(0))
-  .catch(error => {
+  .catch((error) => {
     console.error(error);
     process.exit(1);
   });

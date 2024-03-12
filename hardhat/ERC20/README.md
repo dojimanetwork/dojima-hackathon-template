@@ -42,6 +42,8 @@ TestToken
 - Rename `.env.example` file to `.env`
 - Paste your wallet address `Private Key` in the `.env` file
 ![Private Key Sample](images/private_key_sample.png)
+
+- To deploy the smart contract run the script
 ```bash
 $ npx hardhat run scripts/deploy.js --network dojima_chain_devnet
 ```

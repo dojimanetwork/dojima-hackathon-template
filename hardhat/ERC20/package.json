@@ -1,0 +1,23 @@
+{
+  "name": "erc20",
+  "version": "1.0.0",
+  "description": "hardhat tutorial for the token deployment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.21.0"
+  },
+  "dependencies": {
+    "@ethersproject/bignumber": "^5.7.0",
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
+    "@nomiclabs/hardhat-truffle5": "^2.0.7",
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/hardhat-upgrades": "^3.0.5",
+    "dotenv": "^16.4.5"
+  }
+}

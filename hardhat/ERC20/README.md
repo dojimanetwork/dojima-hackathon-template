@@ -2,7 +2,7 @@
 
 ### Setup genesis
 
-#### Ensure your Node.js version is greater than 18.0.0.
+#### - Ensure your Node.js version is greater than 18.0.0.
 
 Setup genesis whenever contracts get changed
 ### 1. Install dependencies and submodules
@@ -39,6 +39,9 @@ TestToken
 ```
 
 ### 4. Deploy Contracts to Dojima Chain
+- Rename `.env.example` file to `.env`
+- Paste your wallet address `Private Key` in the `.env` file
+![Private Key Sample](images/private_key_sample.png)
 ```bash
 $ npx hardhat run scripts/deploy.js --network dojima_chain_devnet
 ```

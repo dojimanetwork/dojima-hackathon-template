@@ -27,6 +27,8 @@ module.exports = {
     ],
   },
 
+  defaultNetwork: "dojima_chain_devnet",
+
   // Network configurations for deploying contracts
   networks: {
     // Configuration for Dojima Chain Devnet

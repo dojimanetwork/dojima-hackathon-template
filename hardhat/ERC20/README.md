@@ -27,11 +27,15 @@ $ npx hardhat test
 ```
 Should get the output similar to
 ```bash
-Token contract
-    ✓ Deployment should assign the total supply of tokens to the owner (654ms)
+TestToken
+    ✔ Should have correct name, symbol, and initial supply (101ms)
+    ✔ Should mint tokens to specified address
+    ✔ Should allow owner to pause and unpause the contract
+    ✔ Should transfer tokens between accounts when not paused
+    ✔ Should not transfer tokens when paused (75ms)
 
 
-  1 passing (663ms)
+  5 passing (13s)
 ```
 
 ### 4. Deploy Contracts to Dojima Chain

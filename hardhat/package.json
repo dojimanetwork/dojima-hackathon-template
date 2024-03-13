@@ -15,11 +15,13 @@
     "hardhat": "^2.21.0"
   },
   "dependencies": {
+    "@dojimanetwork/dojima-contracts": "^0.1.1",
     "@ethersproject/bignumber": "^5.7.0",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.6",
     "@nomiclabs/hardhat-truffle5": "^2.0.7",
     "@openzeppelin/contracts": "^5.0.2",
     "@openzeppelin/hardhat-upgrades": "^3.0.5",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "readline-sync": "^1.4.10"
   }
 }

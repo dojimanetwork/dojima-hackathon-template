@@ -38,7 +38,7 @@ contract OmniChainERC20 is  Initializable, UUPSUpgradeable, ReentrancyGuardUpgra
         __UUPSUpgradeable_init();
         __ReentrancyGuard_init();
 
-        _setupRole(ADMIN_ROLE, msg.sender);
+        _grantRole(ADMIN_ROLE, msg.sender);
 
         xToken = XTokenContract(_xTokenAddress);
         outboundStateSender = IOutboundStateSender(_outboundStateSender);

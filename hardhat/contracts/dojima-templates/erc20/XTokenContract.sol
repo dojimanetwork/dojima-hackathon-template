@@ -15,7 +15,7 @@ contract XTokenContract is ERC20Burnable, AccessControl {
     constructor(string memory name, string memory symbol, uint8 decimals_) ERC20(name, symbol) {
         _decimals = decimals_;
         _mint(msg.sender, 10000000 * (10 ** uint256(decimals_)));
-        _setupRole(ADMIN_ROLE, msg.sender);
+        _grantRole(ADMIN_ROLE, msg.sender);
     }
 
     function decimals() public view virtual override returns (uint8) {

@@ -80,8 +80,8 @@ async function main() {
 
 	writeContractAddresses({
 		StateContracts: {
-			OutboundStateSender: inboundStateSenderContract,
-			InboundStateSender: outboundStateSenderContract,
+			InboundStateSender: inboundStateSenderContract,
+			OutboundStateSender: outboundStateSenderContract,
 			StateSyncerVerifier: stateSyncerVerifierContract,
 		},
 		OmniChainERC20: omniChainContract.target,

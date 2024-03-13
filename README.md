@@ -81,4 +81,4 @@ Test Token deployed to: 0xA8548F964cBBfD495a966bB79e9f13493f301aB4
 ```
 5. Submit a `Pull Request` to this repository with your changes.
 
-**Happy _building_! 😀 **
+#### Happy _building_! 😀

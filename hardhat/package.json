@@ -4,6 +4,8 @@
   "description": "hardhat tutorial for the token deployment",
   "main": "index.js",
   "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dojima-network",

@@ -1,18 +1,8 @@
 # Dojima Hackathon
 
-- The first things you need to do is cloning this repository and installing its
-dependencies:
-
-```bash
-$ git clone https://github.com/dojimanetwork/dojima-hackathon-template.git
-
-$ cd hardhat
-
-$ npm install
-```
-- Ensure your Node.js version is greater than 18.0.0.
-
 ### Setup genesis
+
+#### - Ensure your Node.js version is greater than 18.0.0.
 
 Setup genesis whenever contracts get changed
 ### 1. Install dependencies and submodules
@@ -51,7 +41,7 @@ TestToken
 ### 4. Deploy Contracts to Dojima Chain
 - Rename `.env.example` file to `.env`
 - Paste your wallet address `Private Key` in the `.env` file
-![Private Key Sample](hardhat/images/private_key_sample.png)
+![Private Key Sample](images/private_key_sample.png)
 
 - To deploy the smart contract run the script
 ```bash
@@ -80,5 +70,3 @@ Test Token deployed to: 0xA8548F964cBBfD495a966bB79e9f13493f301aB4
 6. Deployed contract address on top of DOJIMA blockchain
 ```
 5. Submit a `Pull Request` to this repository with your changes.
-
-#### Happy _building_! 😀

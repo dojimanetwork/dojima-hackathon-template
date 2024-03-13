@@ -58,7 +58,7 @@ Test Token deployed to: 0xA8548F964cBBfD495a966bB79e9f13493f301aB4
 ### PR Submission Guidelines
 
 1. Fork `dojima-hackathon-template` repository
-2. Create a new folder with `team-name` inside ``hackathon/<hackathon-name>`` folder in main branch
+2. Create a new folder with `project-name` inside ``hackathon/<hackathon-name>`` folder in main branch
 3. Copy your entire project repository and add a `README` file.
 4. `README` file should contain the following:
 ```markdown

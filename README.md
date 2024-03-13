@@ -51,7 +51,7 @@ TestToken
 ### 4. Deploy Contracts to Dojima Chain
 - Rename `.env.example` file to `.env`
 - Paste your wallet address `Private Key` in the `.env` file
-![Private Key Sample](hardhat/ERC20/images/private_key_sample.png)
+![Private Key Sample](hardhat/images/private_key_sample.png)
 
 - To deploy the smart contract run the script
 ```bash

@@ -9,9 +9,9 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 
 // Replace Your_Name with your name and Token_Symbol with 3 letters form you name
 contract Your_Name is ERC20, ERC20Burnable, Ownable, ERC20Permit {
-    constructor(address initialOwner)
+    constructor()
         ERC20("Your_Name", "Token_Symbol")
-        Ownable(initialOwner)
+        Ownable(msg.sender)
         ERC20Permit("Your_Name")
     {
         _mint(msg.sender, 1000000 * 10 ** decimals());
